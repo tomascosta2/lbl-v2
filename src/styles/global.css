@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+	--background: #092413;
+	--highlight: #2BDA6E;
+}
+
+body {
+	font-family: 'Archivo Variable', sans-serif;
+	/* font-family: 'Inter', sans-serif !important; */
+	background-color: var(--background);
+}
+
+.bgDarkestGreen {
+	background-color: var(--background);
+}
+.bgLblGreen {
+	background-color: var(--highlight);
+}
+
+.lbl-container {
+	@apply max-w-[1100px] mx-auto px-4;
+}
+.lbl-btn {
+	@apply bg-gradient-to-r from-[#2BDA6E] to-[#00FF62] text-[20px] px-[42px] py-[30px] rounded-lg block w-fit font-bold text-[#092413];
+}
