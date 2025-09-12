@@ -1,3 +1,36 @@
+---
+const PROBLEMAS = [
+	{
+		icon: "world-icon.svg",
+		span: "Estas intentando venderle a cualquiera",
+		title: "Creas páginas para todo tipo de negocios lo que no te permite armar una oferta irresistible",
+		description:
+			"La mayoría piensa que mientras a más gente le vendas más gente te va a comprar, pero eso no solo es 100% incorrecto, sino que además perjudica tu optimización del tiempo.",
+	},
+	{
+		icon: "bill-icon.svg",
+		span: "Pensas que nadie te va a pagar caro",
+		title: "Estas acostumbrado a negocios que te quieren ratonear $20 de $150 que les pasaste en el presupuesto",
+		description:
+			"El problema no sos vos, pero tampoco ese negocio, el problema es que le estás intentando vender algo que para ellos es un “Extra” o algo para “Cumplir”.",
+	},
+	{
+		icon: "plant-icon.svg",
+		span: "Arrancas cada proyecto desde cero",
+		title: "Si para cada cliente tenes que empezar de cero nunca vas a llegar a 5 mil dólares por mes",
+		description:
+			"Si todos tus clientes son distintos va a ser muy difícil crear sistemas y procesos repetitivos y fáciles de delegar, para que pases de ser freelancer a dueño de negocio.",
+	},
+	{
+		icon: "people-icon.svg",
+		span: "La mayoría de tus clientes son referidos",
+		title: "Si dependes de que tu cliente anterior te recomiende nunca vas a tener estabilidad y tampoco escalabilidad",
+		description:
+			"Correr anuncios es la forma más fácil de captar interesados en tu servicio. Te explicamos como hacerlo para que no cometas los tipicos errores que hacen que la mayoria abandone antes de tiempo.",
+	},
+];
+---
+
 <section class="pt-[64px]">
 	<div class="lbl-container">
 		<div class="max-w-full relative w-[1000px] py-[40px] mx-auto">
@@ -13,9 +46,10 @@
 			/>
 
 			<p
-				class="bg-[#2BDA6E]/40 mt-[100px] text-[14px] border-2 border-[#2BDA6E] py-[13px] px-[27px] text-white rounded-full w-fit mx-auto"
+				class="bg-[#2BDA6E]/40 flex items-center gap-2 mt-[100px] text-[14px] border-2 border-[#2BDA6E] py-[13px] px-[27px] text-white rounded-full w-fit mx-auto"
 			>
-				Tu problema
+				<img src="/images/cross-icon.svg" alt="Tus problemas" />
+				<span>Tu problema</span>
 			</p>
 			<h2
 				class="text-white text-[51px] font-bold text-center leading-[100%] mt-8 drop-shadow-[0_15px_15px_rgba(255,255,255,0.25)]"
@@ -28,6 +62,31 @@
 			>
 				Muy seguramente es por alguna de las siguientes razones 👇🏻
 			</p>
+		</div>
+		<div class="grid grid-cols-2 gap-4">
+			{
+				PROBLEMAS.map((problem) => {
+					return (
+						<div class="bg-[#0C321A] rounded-[20px] p-2">
+							<div class="bg-[#0C321A] outline-1 outline-[#2BDA6E]/30 rounded-[12px] p-6">
+								<p class="bg-[#2BDA6E]/40 flex items-center gap-2 text-[14px] border-2 border-[#2BDA6E] py-[13px] px-[27px] text-white rounded-full w-fit">
+									<img
+										src={`/images/${problem.icon}`}
+										alt={problem.title}
+									/>
+									<span>{problem.span}</span>
+								</p>
+								<h3 class="text-white text-[18px] font-medium text-start leading-[100%] mt-6 drop-shadow-[0_15px_15px_rgba(255,255,255,0.25)]">
+									{problem.title}
+								</h3>
+								<p class="leading-[100%] text-[14px] mt-2 text-[#2BDA6E]">
+									{problem.description}
+								</p>
+							</div>
+						</div>
+					);
+				})
+			}
 		</div>
 	</div>
 </section>
