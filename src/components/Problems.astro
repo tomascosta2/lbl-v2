@@ -52,7 +52,7 @@ const PROBLEMAS = [
 				<span>Tu problema</span>
 			</p>
 			<h2
-				class="text-white text-[51px] font-bold text-center leading-[100%] mt-8 drop-shadow-[0_15px_15px_rgba(255,255,255,0.25)]"
+				class="text-white text-[32px] md:text-[51px] font-bold text-center leading-[100%] mt-8 drop-shadow-[0_15px_15px_rgba(255,255,255,0.25)]"
 			>
 				¿Estas harto de perseguir clientes que encima te pelean el
 				precio?
@@ -63,13 +63,13 @@ const PROBLEMAS = [
 				Muy seguramente es por alguna de las siguientes razones 👇🏻
 			</p>
 		</div>
-		<div class="grid grid-cols-2 gap-4">
+		<div class="grid md:grid-cols-2 gap-4">
 			{
 				PROBLEMAS.map((problem) => {
 					return (
 						<div class="bg-[#0C321A] rounded-[20px] p-2">
 							<div class="bg-[#0C321A] outline-1 outline-[#2BDA6E]/30 rounded-[12px] p-6">
-								<p class="bg-[#2BDA6E]/40 flex items-center gap-2 text-[14px] border-2 border-[#2BDA6E] py-[13px] px-[27px] text-white rounded-full w-fit">
+								<p class="bg-[#2BDA6E]/40 leading-[120%] flex items-center gap-4 text-[14px] border-2 border-[#2BDA6E] py-[13px] px-[27px] text-white rounded-full w-fit">
 									<img
 										src={`/images/${problem.icon}`}
 										alt={problem.title}

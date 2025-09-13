@@ -1,0 +1,104 @@
+---
+const INCLUYE = [
+	"Clases grabadas explicando como convertir tu servicio freelance en un negocio High Ticket",
+	"LBL AI para que crees anuncios, copys y videos de venta únicos para vos y tus clientes",
+	"LBL AI para que crees anuncios, copys y videos de venta únicos para vos y tus clientes",
+	"Cómo desarrollamos nosotros nuestras landings VSL con un Framework específico y supersencillo",
+	"Cómo lanzar anuncios profesionales desde Meta Ads Manager que atraigan clientes calificados",
+	"Clase grabada paso a paso para crear una landing efectiva con video de ventas que convierta.",
+	"Cómo optimizar tu perfil para que transmita autoridad, claridad y convierta seguidores en clientes.",
+];
+---
+
+<section class="pt-[80px]">
+	<div class="lbl-container">
+		<p
+			class="bg-gradient-to-t from-[#00FF62] to-[#2BDA6E] flex items-center gap-3 text-[12px] md:text-[14px] border-2 border-[#2BDA6E] py-[13px] px-[27px] text-[#092413] uppercase font-medium rounded-full w-fit mx-auto"
+		>
+			<img src="/images/lightning-icon.svg" alt="Tus problemas" />
+			<span>ACCEDE AHORA A LANDING BUILDERS LAB</span>
+		</p>
+		<h2
+			class="text-white text-[32px] md:text-[51px] font-bold text-center leading-[100%] mt-8 drop-shadow-[0_15px_15px_rgba(255,255,255,0.25)]"
+		>
+			Obtené el Paso a Paso para Conseguir Clientes Dispuestos a Pagar
+			Bien
+		</h2>
+		<p
+			class="text-[#2BDA6E] md:text-[18px] mt-4 text-center max-w-[668px] leading-[100%] mx-auto"
+		>
+			Si llegaste hasta acá, vos y yo sabemos que tus clientes te viven
+			regateando presupuestos y no tenés los resultados que sabes que
+			mereces. ¿Entonces por qué no regalarte, por tan solo $47 USD, la
+			oportunidad de transformar tu trabajo como freelance en un negocio
+			rentable, escalable y delegable? 👀
+		</p>
+		<div
+			class="bg-[#0C321A] md:w-[570px] mx-auto mt-14 rounded-[20px] p-4 md:p-[27px]"
+		>
+			<div
+				class="bg-[#0C321A] outline-1 outline-[#2BDA6E]/30 rounded-[12px] p-8 md:py-[50px] md:px-[42px]"
+			>
+				<img
+					class="h-[61px] w-auto mx-auto"
+					src="/images/landing-builders-lab-logo.png"
+					alt="Landing Builders Lab Logo"
+				/>
+
+				<p
+					class="text-[#2BDA6E] text-[18px] mt-8 text-center max-w-[668px] leading-[100%] mx-auto"
+				>
+					¡Obtén acceso ilimitado y de por vida a los pasos exactos
+					para hacer despegar tu negocio por menos de lo que pagarías
+					por una cena para dos!
+				</p>
+				<div class="grid gap-4 mt-8 text-white">
+					{
+						INCLUYE.map((item) => {
+							return (
+								<div class="flex gap-2 items-center">
+									<img
+										src="/images/check-icon.svg"
+										alt="Check"
+									/>
+									<p>{item}</p>
+								</div>
+							);
+						})
+					}
+				</div>
+				<div class="flex items-center mt-10 justify-center gap-6 md:gap-8">
+					<span
+						class="text-center block text-[42px] md:text-[57px] leading-[100%] font-bold bg-gradient-to-b from-[#FFFFFF] to-[#2BDA6E] bg-clip-text text-transparent"
+					>
+						$47 USD
+					</span>
+					<span class="line-through text-[24px] md:text-[37px] block text-[#2BDA6E]">
+						$197
+					</span>
+				</div>
+				<a
+					class="lbl-btn --sm mt-10 mb-6 mx-auto outline-1 outline-[#2BDA6E] outline-offset-4"
+					href="/checkout"
+				>
+					ACCEDER AHORA A LANDING BUILDERS LAB
+				</a>
+				<p class="flex text-[14px] text-white items-center justify-center gap-2">
+					<svg
+						width="20"
+						height="20"
+						viewBox="0 0 20 20"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M17.5 4.375V8.75C17.5 12.8688 15.5063 15.3648 13.8336 16.7336C12.032 18.207 10.2398 18.7078 10.1617 18.7281C10.0543 18.7573 9.94102 18.7573 9.83359 18.7281C9.75547 18.7078 7.96563 18.207 6.16172 16.7336C4.49375 15.3648 2.5 12.8688 2.5 8.75V4.375C2.5 4.04348 2.6317 3.72554 2.86612 3.49112C3.10054 3.2567 3.41848 3.125 3.75 3.125H16.25C16.5815 3.125 16.8995 3.2567 17.1339 3.49112C17.3683 3.72554 17.5 4.04348 17.5 4.375Z"
+							fill="white"></path>
+					</svg>
+					Pago único
+				</p>
+			</div>
+		</div>
+		<img class="mx-auto h-[35px] mt-4" src="/images/payment-methods.png" alt="Metodos de pago">
+	</div>
+</section>

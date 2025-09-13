@@ -1,0 +1,120 @@
+---
+const faqs = [
+  {
+    pregunta: "¿Realmente puedo cobrar más de 1.000 dólares por una landing page si recién estoy empezando?",
+    respuesta:
+      "Sí. No se trata de cuántos años llevás trabajando, sino de contar con un método probado que atrae clientes dispuestos a pagar bien. Con el framework de Landing Builders Lab, incluso quienes empiezan logran posicionarse con ofertas irresistibles que justifican precios premium."
+  },
+  {
+    pregunta: "¿Qué diferencia tiene Landing Builders Lab con otros cursos de diseño web o freelancing?",
+    respuesta:
+      "La mayoría de cursos te enseñan herramientas, pero no cómo vender. LBL está enfocado en el paso a paso para transformar tu servicio en un negocio High Ticket: landings que convierten, anuncios que atraen clientes calificados y procesos que podés replicar y escalar. Es un sistema probado, no teoría."
+  },
+  {
+    pregunta: "¿Necesito saber programación para aplicar lo que enseñan?",
+    respuesta:
+      "No. El método está pensado para que cualquier freelancer de diseño o marketing pueda implementarlo sin ser developer avanzado. Usamos herramientas simples y un framework específico de landings VSL que cualquiera puede aplicar."
+  },
+  {
+    pregunta: "¿En cuánto tiempo voy a ver resultados con este método?",
+    respuesta:
+      "Depende de la acción que tomes, pero muchos alumnos cierran sus primeros clientes premium en pocas semanas. El sistema está diseñado para acortar el camino: no depender de referidos, lanzar anuncios simples y conseguir resultados en menos de 60 días."
+  },
+  {
+    pregunta: "¿Funciona solo para diseñadores web o también para freelancers de marketing y desarrollo?",
+    respuesta:
+      "Funciona para cualquier freelancer digital: diseñadores, marketers y developers. Porque el foco no es la herramienta que uses, sino cómo transformar tu servicio en un negocio High Ticket que vende soluciones, no solo horas de trabajo."
+  },
+  {
+    pregunta: "¿Qué pasa si mis clientes actuales no quieren pagar más?",
+    respuesta:
+      "Justamente, este método te enseña a dejar de depender de clientes que no valoran tu trabajo y atraer a otros que sí están dispuestos a invertir. No se trata de convencer a los que regatean, sino de posicionarte frente a quienes buscan resultados y pagan bien por ellos."
+  },
+  {
+    pregunta: "¿Este sistema sirve en Latinoamérica o solo en países como Estados Unidos?",
+    respuesta:
+      "Sirve en cualquier mercado. Lo que enseñamos no depende del país, sino de la psicología de ventas y de saber captar clientes calificados a través de anuncios y landings VSL. Tenemos ejemplos de alumnos que cobran en dólares tanto dentro como fuera de Latinoamérica."
+  },
+  {
+    pregunta: "¿Qué incluye exactamente Landing Builders Lab y cuánto dura el acceso?",
+    respuesta:
+      "Incluye clases grabadas con el paso a paso para crear landings VSL efectivas, frameworks listos para usar, acceso ilimitado a LBL AI (para anuncios, copys y guiones de venta), y actualizaciones de por vida. Pagás una sola vez y accedés para siempre."
+  },
+  {
+    pregunta: "¿Es necesario invertir en anuncios para conseguir clientes aplicando este método?",
+    respuesta:
+      "Sí, pero no necesitás un gran presupuesto. Con campañas estratégicas podés atraer clientes calificados desde el inicio. Invertir en anuncios no es un gasto: es la forma más rápida de dejar de depender de referidos y tener un flujo constante de oportunidades."
+  },
+  {
+    pregunta: "¿Qué pasa si la inteligencia artificial reemplaza mi trabajo como freelancer?",
+    respuesta:
+      "La IA puede ser una amenaza si no la usás, pero en LBL te enseñamos a convertirla en tu mejor empleado. Con LBL AI vas a crear anuncios, copys y guiones en minutos, ganando tiempo y multiplicando tu productividad en lugar de competir contra la tecnología."
+  }
+];
+---
+
+<section class="pt-[80px]">
+	<div>
+		<h2
+			class="text-white max-w-[600px] mx-auto text-[32px] md:text-[51px] font-bold text-center leading-[100%] mt-8 drop-shadow-[0_15px_15px_rgba(255,255,255,0.25)]"
+		>
+			Preguntas más frecuentes
+		</h2>
+		<div class="max-w-[700px] mx-auto mt-8 grid gap-4 px-4" id="faq-container">
+			{
+				faqs.map((item, index) => (
+					<div
+						class="faq-item w-full cursor-pointer p-[20px] bg-[#0C321A] border border-[#2BDA6E]/20 rounded-[14px] last:border-b-0"
+						data-index={index}
+					>
+						<h3 class="faq-question font-semibold text-[18px] md:text-[20px] text-white flex justify-between items-center">
+							<span class="pe-8">
+								{item.pregunta}
+							</span>
+							<div class="rounded-[10px] w-[35px] h-[35px] bg-[#2BDA6E]/30 min-w-[35px] flex items-center justify-center">
+								<svg
+									class="faq-icon size-[14px] transition-all duration-300"
+									fill="#FFF"
+									viewBox="0 0 448 512"
+								>
+									<path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+								</svg>
+							</div>
+						</h3>
+						<div class="faq-answer normal-case overflow-hidden duration-500 transition-all max-h-0">
+							<p class="text-white/80 text-[18px] pt-[10px]">
+								{item.respuesta}
+							</p>
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<script is:inline>
+	const faqItems = document.querySelectorAll(".faq-item");
+
+	faqItems.forEach((item) => {
+		const question = item.querySelector(".faq-question");
+		const answer = item.querySelector(".faq-answer");
+		const icon = item.querySelector(".faq-icon");
+
+		question.addEventListener("click", () => {
+			const isOpen = answer.classList.contains("max-h-[2000px]");
+
+			document
+				.querySelectorAll(".faq-answer")
+				.forEach((ans) => ans.classList.remove("max-h-[2000px]"));
+			document
+				.querySelectorAll(".faq-icon")
+				.forEach((i) => i.classList.remove("rotate-45"));
+
+			if (!isOpen) {
+				answer.classList.add("max-h-[2000px]");
+				icon.classList.add("rotate-45");
+			}
+		});
+	});
+</script>
