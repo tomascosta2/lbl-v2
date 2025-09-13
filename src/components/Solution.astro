@@ -77,7 +77,7 @@ Con la compra de tu curso entrás en la lista de 'Early Access' para que puedas 
 		<div class="grid gap-8 md:gap-0 max-w-[825px] mx-auto">
 			{
 				SOLUCIONES.map((solution, index) => {
-					const order = index % 2 !== 0 ? "-order-1" : "";
+					const order = index % 2 !== 0 ? "md:-order-1" : "md:order-2";
 					return (
 						<div class={`grid md:grid-cols-2 md:gap-16 ${index > 0 ? 'md:-mt-8' : ''}`}>
 							<div class="flex items-center">
@@ -102,7 +102,7 @@ Con la compra de tu curso entrás en la lista de 'Early Access' para que puedas 
 									</p>
 								</div>
 							</div>
-							<div class={`flex items-center justify-center -order-1 md:${order}`}>
+							<div class={`flex items-center px-6 pt-6 md:p-0 justify-center -order-1 ${order}`}>
 								<img class="max-w-full" src={`/images/${solution.image}`} alt="" />
 							</div>
 						</div>
