@@ -5,6 +5,10 @@
 	--highlight: #2BDA6E;
 }
 
+* {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Archivo Variable', sans-serif;
 	/* font-family: 'Inter', sans-serif !important; */
